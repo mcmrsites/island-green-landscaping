@@ -136,7 +136,9 @@
     /* ── HERO ── */
     #hero {
       min-height: 100vh;
-      background: linear-gradient(160deg, #0f2218 0%, #1a3a2a 55%, #1e4a32 100%);
+      background:
+        linear-gradient(160deg, rgba(15,34,24,0.93) 0%, rgba(26,58,42,0.88) 55%, rgba(30,74,50,0.91) 100%),
+        url('https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
       display: flex;
       align-items: center;
       padding: 80px 5vw 60px;
@@ -370,7 +372,9 @@
     @media (max-width: 800px) { #about { grid-template-columns: 1fr; } }
 
     .about-card {
-      background: var(--forest);
+      background:
+        linear-gradient(160deg, rgba(15,34,24,0.92) 0%, rgba(26,58,42,0.85) 100%),
+        url('https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?auto=format&fit=crop&w=900&q=80') center/cover no-repeat;
       border-radius: 20px;
       padding: 48px 40px;
       color: var(--white);
@@ -576,6 +580,63 @@
       font-weight: 600;
       color: var(--white);
     }
+
+    /* ── GALLERY ── */
+    #gallery { background: var(--white); }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: 260px 260px;
+      gap: 12px;
+    }
+
+    @media (max-width: 700px) {
+      .gallery-grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .gallery-grid { grid-template-columns: 1fr; }
+    }
+
+    .gallery-item {
+      position: relative;
+      border-radius: var(--radius);
+      overflow: hidden;
+      cursor: pointer;
+    }
+
+    .gallery-item.tall {
+      grid-row: span 2;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform .45s ease;
+      display: block;
+    }
+
+    .gallery-item:hover img { transform: scale(1.06); }
+
+    .gallery-label {
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      padding: 28px 16px 16px;
+      background: linear-gradient(to top, rgba(15,34,24,.85) 0%, transparent 100%);
+      color: var(--white);
+      font-size: 0.82rem;
+      font-weight: 600;
+      letter-spacing: .5px;
+      opacity: 0;
+      transition: opacity .3s;
+    }
+
+    .gallery-item:hover .gallery-label { opacity: 1; }
 
     /* ── FOOTER ── */
     footer {
@@ -793,6 +854,63 @@
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.7A2 2 0 012 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
       Call Now
     </a>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery">
+  <div class="section-header">
+    <div class="section-tag">Our Work</div>
+    <h2 class="section-title">Yards We've Transformed</h2>
+    <p class="section-sub">From bare dirt to dream outdoor spaces — residential and commercial across Hawaii.</p>
+  </div>
+  <div class="gallery-grid">
+
+    <div class="gallery-item tall">
+      <img
+        src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&q=80"
+        alt="Tropical landscaping Hawaii"
+        loading="lazy"
+      />
+      <div class="gallery-label">Tropical Planting</div>
+    </div>
+
+    <div class="gallery-item">
+      <img
+        src="https://images.unsplash.com/photo-1585320806297-9794b3e4aaae?auto=format&fit=crop&w=800&q=80"
+        alt="Lawn and yard design"
+        loading="lazy"
+      />
+      <div class="gallery-label">Yard Design &amp; Turf</div>
+    </div>
+
+    <div class="gallery-item">
+      <img
+        src="https://images.unsplash.com/photo-1575908539614-ff89490f4a78?auto=format&fit=crop&w=800&q=80"
+        alt="Concrete and pavers"
+        loading="lazy"
+      />
+      <div class="gallery-label">Concrete &amp; Pavers</div>
+    </div>
+
+    <div class="gallery-item">
+      <img
+        src="https://images.unsplash.com/photo-1570129477492-45c003dc6af3?auto=format&fit=crop&w=800&q=80"
+        alt="Artificial turf installation"
+        loading="lazy"
+      />
+      <div class="gallery-label">Artificial Turf</div>
+    </div>
+
+    <div class="gallery-item">
+      <img
+        src="https://images.unsplash.com/photo-1501854140801-50d01698950b?auto=format&fit=crop&w=800&q=80"
+        alt="Beautiful Hawaiian landscape"
+        loading="lazy"
+      />
+      <div class="gallery-label">Full Yard Transformation</div>
+    </div>
+
   </div>
 </section>
 
