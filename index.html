@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Island Green Landscaping &amp; Maintenance | Waipahu, HI</title>
-  <meta name="description" content="Island Green Landscaping and Maintenance LLC — Hawaii's top-rated landscaper since 2005. Artificial turf, concrete, irrigation, french drains, tropical planting & more. Call (808) 368-7871." />
+  <title>Island Green Landscaping &amp; Maintenance | Waipahu, Oahu, HI</title>
+  <meta name="description" content="Island Green Landscaping and Maintenance LLC — Oahu's top-rated landscaper since 2005. Artificial turf, concrete, irrigation, french drains, tropical planting & more. Call (808) 368-7871." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
@@ -55,7 +55,7 @@
       text-decoration: none;
     }
 
-    .nav-logo svg { width: 34px; height: 34px; }
+    .nav-logo svg { width: 36px; height: 36px; }
 
     .nav-logo-text {
       font-size: 1.1rem;
@@ -70,14 +70,14 @@
     .nav-links {
       display: flex;
       align-items: center;
-      gap: 32px;
+      gap: 28px;
       list-style: none;
     }
 
     .nav-links a {
       color: #a8c4b0;
       text-decoration: none;
-      font-size: 0.9rem;
+      font-size: 0.88rem;
       font-weight: 500;
       transition: color .2s;
     }
@@ -88,22 +88,24 @@
       background: var(--earth) !important;
       color: var(--forest) !important;
       font-weight: 700 !important;
-      padding: 10px 22px;
+      padding: 10px 20px;
       border-radius: 8px;
       transition: background .2s !important;
     }
 
     .nav-cta:hover { background: var(--earth2) !important; }
 
-    .hamburger { display: none; cursor: pointer; }
+    .hamburger { display: none; cursor: pointer; background: none; border: none; padding: 4px; }
     .hamburger span {
       display: block;
       width: 24px; height: 2px;
       background: var(--white);
       margin: 5px 0;
+      border-radius: 2px;
+      transition: all .3s;
     }
 
-    @media (max-width: 720px) {
+    @media (max-width: 820px) {
       .nav-links { display: none; }
       .hamburger { display: block; }
       .nav-links.open {
@@ -115,6 +117,11 @@
         padding: 24px 5vw 32px;
         gap: 20px;
         border-top: 1px solid rgba(255,255,255,.07);
+        box-shadow: 0 20px 40px rgba(0,0,0,.4);
+      }
+      .nav-links.open .nav-cta {
+        display: inline-flex;
+        width: fit-content;
       }
     }
 
@@ -122,23 +129,24 @@
     .badge-bar {
       margin-top: 68px;
       background: var(--earth);
-      padding: 13px 5vw;
+      padding: 12px 5vw;
       text-align: center;
       font-weight: 700;
-      font-size: 0.9rem;
+      font-size: 0.85rem;
       color: var(--forest);
       display: flex;
       justify-content: center;
       align-items: center;
       gap: 10px;
+      flex-wrap: wrap;
     }
 
     /* ── HERO ── */
     #hero {
       min-height: 100vh;
       background:
-        linear-gradient(160deg, rgba(15,34,24,0.93) 0%, rgba(26,58,42,0.88) 55%, rgba(30,74,50,0.91) 100%),
-        url('https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+        linear-gradient(160deg, rgba(10,27,18,0.95) 0%, rgba(20,48,33,0.88) 50%, rgba(26,58,42,0.84) 100%),
+        url('https://images.unsplash.com/photo-1598135753163-6167c1a1ad65?auto=format&fit=crop&w=1920&q=85') center/cover no-repeat;
       display: flex;
       align-items: center;
       padding: 80px 5vw 60px;
@@ -146,24 +154,24 @@
       overflow: hidden;
     }
 
-    .hero-leaves {
+    .hero-glow {
       position: absolute;
       inset: 0;
       background-image:
-        radial-gradient(ellipse 60% 50% at 80% 40%, rgba(45,122,79,.18) 0%, transparent 70%),
-        radial-gradient(ellipse 40% 60% at 90% 80%, rgba(74,173,111,.1) 0%, transparent 60%);
+        radial-gradient(ellipse 60% 50% at 75% 35%, rgba(45,122,79,.2) 0%, transparent 65%),
+        radial-gradient(ellipse 40% 60% at 85% 75%, rgba(74,173,111,.12) 0%, transparent 60%);
       pointer-events: none;
     }
 
-    /* decorative SVG leaf */
     .leaf-bg {
       position: absolute;
-      right: -60px;
+      right: -40px;
       top: 50%;
       transform: translateY(-50%);
-      width: 55vw;
-      max-width: 680px;
-      opacity: 0.05;
+      width: 50vw;
+      max-width: 620px;
+      opacity: 0.04;
+      pointer-events: none;
     }
 
     .hero-content {
@@ -175,17 +183,17 @@
     .hero-badge {
       display: inline-flex;
       align-items: center;
-      gap: 6px;
-      background: rgba(200,169,110,.15);
-      border: 1px solid rgba(200,169,110,.4);
+      gap: 8px;
+      background: rgba(200,169,110,.12);
+      border: 1px solid rgba(200,169,110,.35);
       color: var(--earth);
-      font-size: 0.8rem;
-      font-weight: 600;
-      letter-spacing: 1px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 1.2px;
       text-transform: uppercase;
-      padding: 6px 14px;
+      padding: 7px 16px;
       border-radius: 50px;
-      margin-bottom: 24px;
+      margin-bottom: 26px;
     }
 
     .hero-badge::before {
@@ -202,28 +210,29 @@
     }
 
     #hero h1 {
-      font-size: clamp(2.4rem, 5vw, 4rem);
+      font-size: clamp(2.6rem, 5.5vw, 4.2rem);
       font-weight: 900;
       color: var(--white);
-      line-height: 1.1;
-      letter-spacing: -1px;
-      margin-bottom: 20px;
+      line-height: 1.08;
+      letter-spacing: -1.5px;
+      margin-bottom: 22px;
     }
 
     #hero h1 span { color: var(--earth); }
 
-    #hero p {
+    #hero .hero-sub {
       font-size: 1.1rem;
-      color: #8ab89a;
+      color: #7eb09a;
       max-width: 520px;
-      margin-bottom: 40px;
+      margin-bottom: 42px;
+      line-height: 1.7;
     }
 
     .hero-actions {
       display: flex;
       flex-wrap: wrap;
       gap: 14px;
-      margin-bottom: 56px;
+      margin-bottom: 60px;
     }
 
     .btn-primary {
@@ -237,11 +246,11 @@
       padding: 15px 30px;
       border-radius: 10px;
       text-decoration: none;
-      transition: background .2s, transform .15s;
-      box-shadow: 0 4px 20px rgba(200,169,110,.3);
+      transition: background .2s, transform .15s, box-shadow .2s;
+      box-shadow: 0 4px 24px rgba(200,169,110,.35);
     }
 
-    .btn-primary:hover { background: var(--earth2); transform: translateY(-2px); }
+    .btn-primary:hover { background: var(--earth2); transform: translateY(-2px); box-shadow: 0 8px 32px rgba(200,169,110,.4); }
 
     .btn-outline {
       display: inline-flex;
@@ -253,43 +262,45 @@
       font-size: 1rem;
       padding: 14px 28px;
       border-radius: 10px;
-      border: 2px solid rgba(255,255,255,.22);
+      border: 2px solid rgba(255,255,255,.2);
       text-decoration: none;
       transition: border-color .2s, background .2s;
     }
 
-    .btn-outline:hover { border-color: var(--white); background: rgba(255,255,255,.07); }
+    .btn-outline:hover { border-color: rgba(255,255,255,.6); background: rgba(255,255,255,.06); }
 
     .hero-stats {
       display: flex;
       flex-wrap: wrap;
-      gap: 36px;
+      gap: 40px;
     }
 
     .stat-num {
-      font-size: 2rem;
+      font-size: 2.2rem;
       font-weight: 900;
       color: var(--earth);
       line-height: 1;
     }
 
     .stat-label {
-      font-size: 0.8rem;
-      color: #5a8a6a;
+      font-size: 0.78rem;
+      color: #4a7a5a;
       font-weight: 500;
-      margin-top: 4px;
+      margin-top: 5px;
+      text-transform: uppercase;
+      letter-spacing: .5px;
     }
 
-    /* ── SECTIONS COMMON ── */
+    /* ── SECTIONS ── */
     section { padding: 90px 5vw; }
 
     .section-tag {
       display: inline-block;
       background: rgba(45,122,79,.12);
       color: var(--green);
-      font-size: 0.75rem;
+      font-size: 0.73rem;
       font-weight: 700;
-      letter-spacing: 1.2px;
+      letter-spacing: 1.4px;
       text-transform: uppercase;
       padding: 5px 14px;
       border-radius: 50px;
@@ -297,10 +308,10 @@
     }
 
     .section-title {
-      font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+      font-size: clamp(1.9rem, 3.5vw, 2.7rem);
       font-weight: 900;
-      letter-spacing: -0.5px;
-      line-height: 1.15;
+      letter-spacing: -0.6px;
+      line-height: 1.12;
       margin-bottom: 14px;
       color: var(--forest);
     }
@@ -309,17 +320,18 @@
       font-size: 1rem;
       color: var(--gray);
       max-width: 520px;
+      line-height: 1.7;
     }
 
-    .section-header { margin-bottom: 52px; }
+    .section-header { margin-bottom: 56px; }
 
     /* ── SERVICES ── */
     #services { background: var(--off); }
 
     .services-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 22px;
+      grid-template-columns: repeat(auto-fit, minmax(265px, 1fr));
+      gap: 20px;
     }
 
     .service-card {
@@ -327,12 +339,12 @@
       border-radius: var(--radius);
       padding: 30px 26px;
       border: 1px solid var(--light);
-      transition: box-shadow .25s, transform .2s, border-color .2s;
+      transition: box-shadow .25s, transform .2s, border-color .25s;
     }
 
     .service-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 12px 40px rgba(26,58,42,.1);
+      transform: translateY(-5px);
+      box-shadow: 0 16px 44px rgba(26,58,42,.1);
       border-color: var(--lime);
     }
 
@@ -343,7 +355,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      margin-bottom: 16px;
+      margin-bottom: 18px;
     }
 
     .service-icon svg { width: 26px; height: 26px; }
@@ -351,14 +363,79 @@
     .service-card h3 {
       font-size: 1.05rem;
       font-weight: 700;
-      margin-bottom: 8px;
+      margin-bottom: 9px;
       color: var(--forest);
     }
 
     .service-card p {
       font-size: 0.9rem;
       color: var(--gray);
-      line-height: 1.6;
+      line-height: 1.65;
+    }
+
+    /* ── PROCESS ── */
+    #process {
+      background: var(--forest);
+      color: var(--white);
+    }
+
+    #process .section-tag { background: rgba(200,169,110,.15); color: var(--earth); }
+    #process .section-title { color: var(--white); }
+    #process .section-sub { color: #5a8a6a; }
+
+    .process-steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 32px;
+      position: relative;
+    }
+
+    .process-step {
+      position: relative;
+      padding: 36px 30px;
+      background: rgba(255,255,255,.04);
+      border: 1px solid rgba(255,255,255,.08);
+      border-radius: 16px;
+      transition: background .25s, border-color .25s;
+    }
+
+    .process-step:hover {
+      background: rgba(255,255,255,.07);
+      border-color: rgba(200,169,110,.3);
+    }
+
+    .step-number {
+      font-size: 3.5rem;
+      font-weight: 900;
+      color: rgba(200,169,110,.15);
+      line-height: 1;
+      margin-bottom: 16px;
+      letter-spacing: -2px;
+    }
+
+    .step-icon {
+      width: 48px; height: 48px;
+      background: rgba(200,169,110,.12);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 18px;
+    }
+
+    .step-icon svg { width: 24px; height: 24px; color: var(--earth); }
+
+    .process-step h3 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 10px;
+    }
+
+    .process-step p {
+      font-size: 0.9rem;
+      color: #5a8a6a;
+      line-height: 1.65;
     }
 
     /* ── ABOUT ── */
@@ -369,62 +446,69 @@
       align-items: center;
     }
 
-    @media (max-width: 800px) { #about { grid-template-columns: 1fr; } }
+    @media (max-width: 860px) { #about { grid-template-columns: 1fr; } }
 
     .about-card {
       background:
-        linear-gradient(160deg, rgba(15,34,24,0.92) 0%, rgba(26,58,42,0.85) 100%),
-        url('https://lh3.googleusercontent.com/gps-cs-s/APNQkAEmSnmPzn35G6QYp8lceuxKBJVMKZPYGtA4lB9SPtAVqn7jpgca3qNK_cxy-sz7I5jkdQoSOZ2xAbaXqmiiZwyF9EjhSguBEThZrDzlN41vGv6jddpnHKeuzpdId1yjTRwB8aevRkDzYFyQ=w900-h700') center/cover no-repeat;
+        linear-gradient(160deg, rgba(10,27,18,0.93) 0%, rgba(20,48,33,0.88) 100%),
+        url('https://images.unsplash.com/photo-1585320806297-9794b3e4eba3?auto=format&fit=crop&w=900&q=80') center/cover no-repeat;
       border-radius: 20px;
       padding: 48px 40px;
       color: var(--white);
       position: relative;
       overflow: hidden;
+      border: 1px solid rgba(200,169,110,.12);
     }
 
     .about-card::before {
       content: '';
       position: absolute;
-      top: -40px; right: -40px;
-      width: 200px; height: 200px;
-      background: radial-gradient(circle, rgba(74,173,111,.18) 0%, transparent 70%);
+      top: -50px; right: -50px;
+      width: 220px; height: 220px;
+      background: radial-gradient(circle, rgba(74,173,111,.14) 0%, transparent 70%);
       border-radius: 50%;
     }
 
     .about-card::after {
       content: '';
       position: absolute;
-      bottom: -30px; left: -30px;
-      width: 150px; height: 150px;
-      background: rgba(200,169,110,.08);
+      bottom: -40px; left: -40px;
+      width: 180px; height: 180px;
+      background: rgba(200,169,110,.07);
       border-radius: 50%;
     }
 
     .about-name {
-      font-size: 1.9rem;
+      font-size: 2rem;
       font-weight: 900;
       letter-spacing: -0.5px;
       margin-bottom: 4px;
+      position: relative;
+      z-index: 1;
     }
 
     .about-name span { color: var(--earth); }
 
     .about-title {
-      font-size: 0.82rem;
-      color: #5a9970;
-      font-weight: 500;
+      font-size: 0.8rem;
+      color: #4a8060;
+      font-weight: 600;
       text-transform: uppercase;
-      letter-spacing: 1px;
-      margin-bottom: 26px;
+      letter-spacing: 1.2px;
+      margin-bottom: 28px;
+      position: relative;
+      z-index: 1;
     }
 
     .about-detail {
       display: flex;
       align-items: center;
-      gap: 9px;
-      color: #8abf9a;
+      gap: 10px;
+      color: #7aaf90;
       font-size: 0.9rem;
-      margin-bottom: 10px;
+      margin-bottom: 12px;
+      position: relative;
+      z-index: 1;
     }
 
     .about-detail svg { width: 15px; height: 15px; flex-shrink: 0; color: var(--earth); }
@@ -432,33 +516,36 @@
     .about-stars {
       display: flex;
       align-items: center;
-      gap: 8px;
-      margin-top: 22px;
-      padding-top: 22px;
+      gap: 10px;
+      margin-top: 24px;
+      padding-top: 24px;
       border-top: 1px solid rgba(255,255,255,.08);
+      position: relative;
+      z-index: 1;
     }
 
     .stars { color: var(--earth); font-size: 1.1rem; letter-spacing: 2px; }
-    .stars-label { font-size: 0.82rem; color: #5a9970; }
+    .stars-label { font-size: 0.82rem; color: #4a7a5a; }
 
     .about-text p {
       font-size: 0.98rem;
       color: var(--gray);
-      margin-bottom: 16px;
+      margin-bottom: 18px;
+      line-height: 1.75;
     }
 
     .check-list {
       list-style: none;
       display: flex;
       flex-direction: column;
-      gap: 10px;
-      margin-bottom: 36px;
+      gap: 11px;
+      margin-bottom: 38px;
     }
 
     .check-list li {
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: 11px;
       font-size: 0.95rem;
       color: var(--forest);
       font-weight: 500;
@@ -477,8 +564,97 @@
       background-position: center;
     }
 
+    /* ── GALLERY ── */
+    #gallery { background: var(--off); }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: 260px 260px;
+      gap: 14px;
+    }
+
+    @media (max-width: 760px) {
+      .gallery-grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+      }
+      .gallery-item.tall { grid-row: span 1; }
+    }
+
+    @media (max-width: 500px) {
+      .gallery-grid { grid-template-columns: 1fr; }
+    }
+
+    .gallery-item {
+      position: relative;
+      border-radius: var(--radius);
+      overflow: hidden;
+      cursor: pointer;
+    }
+
+    .gallery-item.tall { grid-row: span 2; }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform .5s ease;
+      display: block;
+    }
+
+    .gallery-item:hover img { transform: scale(1.07); }
+
+    .gallery-label {
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      padding: 32px 18px 16px;
+      background: linear-gradient(to top, rgba(10,27,18,.88) 0%, transparent 100%);
+      color: var(--white);
+      font-size: 0.82rem;
+      font-weight: 600;
+      letter-spacing: .5px;
+      opacity: 0;
+      transition: opacity .3s;
+    }
+
+    .gallery-item:hover .gallery-label { opacity: 1; }
+
     /* ── REVIEWS ── */
-    #reviews { background: var(--off); }
+    #reviews { background: var(--white); }
+
+    .reviews-header-row {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-bottom: 52px;
+    }
+
+    .google-rating {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      background: var(--off);
+      border: 1px solid var(--light);
+      border-radius: 14px;
+      padding: 16px 22px;
+      text-decoration: none;
+      transition: border-color .2s, box-shadow .2s;
+    }
+
+    .google-rating:hover { border-color: var(--lime); box-shadow: 0 4px 20px rgba(26,58,42,.08); }
+
+    .google-rating-num {
+      font-size: 2rem;
+      font-weight: 900;
+      color: var(--forest);
+      line-height: 1;
+    }
+
+    .google-rating-stars { color: var(--earth); font-size: 1.1rem; letter-spacing: 2px; }
+    .google-rating-count { font-size: 0.8rem; color: var(--gray); }
 
     .reviews-grid {
       display: grid;
@@ -487,24 +663,24 @@
     }
 
     .review-card {
-      background: var(--white);
+      background: var(--off);
       border-radius: var(--radius);
       padding: 28px 26px;
       border: 1px solid var(--light);
       display: flex;
       flex-direction: column;
       gap: 14px;
-      transition: box-shadow .2s;
+      transition: box-shadow .2s, transform .2s;
     }
 
-    .review-card:hover { box-shadow: 0 8px 32px rgba(26,58,42,.09); }
+    .review-card:hover { box-shadow: 0 8px 36px rgba(26,58,42,.1); transform: translateY(-3px); }
 
     .review-stars { color: var(--earth); font-size: 1rem; letter-spacing: 2px; }
 
     .review-text {
-      font-size: 0.95rem;
+      font-size: 0.94rem;
       color: #374151;
-      line-height: 1.65;
+      line-height: 1.7;
       flex: 1;
     }
 
@@ -514,7 +690,7 @@
     .review-author { display: flex; align-items: center; gap: 12px; }
 
     .avatar {
-      width: 40px; height: 40px;
+      width: 42px; height: 42px;
       border-radius: 50%;
       background: linear-gradient(135deg, var(--forest), var(--green));
       display: flex;
@@ -529,34 +705,104 @@
     .author-name { font-weight: 700; font-size: 0.9rem; color: var(--forest); }
     .author-meta { font-size: 0.78rem; color: var(--gray); }
 
+    /* ── FAQ ── */
+    #faq { background: var(--off); }
+
+    .faq-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      max-width: 900px;
+    }
+
+    @media (max-width: 700px) { .faq-grid { grid-template-columns: 1fr; } }
+
+    .faq-item {
+      background: var(--white);
+      border: 1px solid var(--light);
+      border-radius: var(--radius);
+      overflow: hidden;
+    }
+
+    .faq-q {
+      width: 100%;
+      background: none;
+      border: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 20px 22px;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--forest);
+      text-align: left;
+    }
+
+    .faq-q svg {
+      width: 18px; height: 18px;
+      flex-shrink: 0;
+      color: var(--green);
+      transition: transform .3s;
+    }
+
+    .faq-item.open .faq-q svg { transform: rotate(45deg); }
+
+    .faq-a {
+      font-size: 0.9rem;
+      color: var(--gray);
+      line-height: 1.7;
+      padding: 0 22px;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height .35s ease, padding .3s;
+    }
+
+    .faq-item.open .faq-a {
+      max-height: 300px;
+      padding: 0 22px 20px;
+    }
+
     /* ── CONTACT ── */
     #contact {
       background: var(--forest);
       color: var(--white);
     }
 
-    #contact .section-title { color: var(--white); }
-    #contact .section-sub { color: #6a9a7a; }
+    .contact-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 56px;
+      align-items: start;
+    }
 
-    .contact-info { display: flex; flex-direction: column; gap: 18px; max-width: 560px; }
+    @media (max-width: 820px) { .contact-layout { grid-template-columns: 1fr; } }
+
+    #contact .section-tag { background: rgba(200,169,110,.15); color: var(--earth); }
+    #contact .section-title { color: var(--white); }
+    #contact .section-sub { color: #4e7a60; max-width: 100%; }
+
+    .contact-info { display: flex; flex-direction: column; gap: 14px; }
 
     .contact-item {
       display: flex;
       align-items: flex-start;
       gap: 16px;
-      padding: 20px 22px;
+      padding: 18px 20px;
       background: rgba(255,255,255,.05);
       border-radius: var(--radius);
-      border: 1px solid rgba(255,255,255,.08);
+      border: 1px solid rgba(255,255,255,.07);
       transition: border-color .2s;
       text-decoration: none;
     }
 
-    .contact-item:hover { border-color: var(--earth); }
+    .contact-item:hover { border-color: rgba(200,169,110,.4); }
 
     .contact-item-icon {
       width: 44px; height: 44px;
-      background: rgba(200,169,110,.15);
+      background: rgba(200,169,110,.12);
       border-radius: 10px;
       display: flex;
       align-items: center;
@@ -567,93 +813,196 @@
     .contact-item-icon svg { width: 20px; height: 20px; }
 
     .contact-item-label {
-      font-size: 0.75rem;
-      color: #4e8060;
-      font-weight: 600;
+      font-size: 0.72rem;
+      color: #3d6a4e;
+      font-weight: 700;
       text-transform: uppercase;
-      letter-spacing: 1px;
+      letter-spacing: 1.2px;
       margin-bottom: 4px;
     }
 
     .contact-item-value {
-      font-size: 1rem;
+      font-size: 0.98rem;
       font-weight: 600;
       color: var(--white);
     }
 
-    /* ── GALLERY ── */
-    #gallery { background: var(--white); }
+    /* Quote form */
+    .quote-form {
+      background: rgba(255,255,255,.05);
+      border: 1px solid rgba(255,255,255,.09);
+      border-radius: 16px;
+      padding: 36px 32px;
+    }
 
-    .gallery-grid {
+    .quote-form h3 {
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: var(--white);
+      margin-bottom: 6px;
+    }
+
+    .quote-form p {
+      font-size: 0.88rem;
+      color: #4e7a60;
+      margin-bottom: 26px;
+    }
+
+    .form-row {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      grid-template-rows: 260px 260px;
+      grid-template-columns: 1fr 1fr;
       gap: 12px;
     }
 
-    @media (max-width: 700px) {
-      .gallery-grid {
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: auto;
-      }
+    @media (max-width: 500px) { .form-row { grid-template-columns: 1fr; } }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      margin-bottom: 14px;
     }
 
-    @media (max-width: 480px) {
-      .gallery-grid { grid-template-columns: 1fr; }
+    .form-group label {
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: #4e7a60;
+      text-transform: uppercase;
+      letter-spacing: .8px;
     }
 
-    .gallery-item {
-      position: relative;
-      border-radius: var(--radius);
-      overflow: hidden;
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+      background: rgba(255,255,255,.07);
+      border: 1px solid rgba(255,255,255,.1);
+      border-radius: 8px;
+      padding: 12px 14px;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.92rem;
+      color: var(--white);
+      outline: none;
+      transition: border-color .2s;
+      width: 100%;
+    }
+
+    .form-group input::placeholder,
+    .form-group textarea::placeholder {
+      color: #3a6048;
+    }
+
+    .form-group select option { background: var(--forest); color: var(--white); }
+
+    .form-group input:focus,
+    .form-group textarea:focus,
+    .form-group select:focus {
+      border-color: var(--earth);
+    }
+
+    .form-group textarea { resize: vertical; min-height: 90px; }
+
+    .btn-form {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background: var(--earth);
+      color: var(--forest);
+      font-weight: 800;
+      font-size: 0.98rem;
+      padding: 14px;
+      border-radius: 10px;
+      border: none;
       cursor: pointer;
+      font-family: 'Inter', sans-serif;
+      transition: background .2s, transform .15s;
+      margin-top: 6px;
     }
 
-    .gallery-item.tall {
-      grid-row: span 2;
+    .btn-form:hover { background: var(--earth2); transform: translateY(-1px); }
+
+    .form-success {
+      display: none;
+      text-align: center;
+      padding: 20px;
     }
 
-    .gallery-item img {
+    .form-success.show { display: block; }
+
+    .form-success svg { color: var(--lime); margin-bottom: 12px; }
+    .form-success p { color: #7ab09a; font-size: 0.92rem; }
+
+    /* ── MAP ── */
+    .map-wrap {
+      border-radius: 16px;
+      overflow: hidden;
+      height: 220px;
+      margin-top: 16px;
+      border: 1px solid rgba(255,255,255,.08);
+    }
+
+    .map-wrap iframe {
       width: 100%;
       height: 100%;
-      object-fit: cover;
-      transition: transform .45s ease;
-      display: block;
+      border: none;
+      filter: grayscale(30%) contrast(1.1);
     }
-
-    .gallery-item:hover img { transform: scale(1.06); }
-
-    .gallery-label {
-      position: absolute;
-      bottom: 0; left: 0; right: 0;
-      padding: 28px 16px 16px;
-      background: linear-gradient(to top, rgba(15,34,24,.85) 0%, transparent 100%);
-      color: var(--white);
-      font-size: 0.82rem;
-      font-weight: 600;
-      letter-spacing: .5px;
-      opacity: 0;
-      transition: opacity .3s;
-    }
-
-    .gallery-item:hover .gallery-label { opacity: 1; }
 
     /* ── FOOTER ── */
     footer {
       background: var(--deep);
-      padding: 28px 5vw;
+      padding: 36px 5vw;
       display: flex;
       align-items: center;
       justify-content: space-between;
       flex-wrap: wrap;
-      gap: 12px;
+      gap: 16px;
+      border-top: 1px solid rgba(255,255,255,.04);
     }
 
     .footer-logo { font-weight: 800; font-size: 1rem; color: var(--white); }
     .footer-logo span { color: var(--earth); }
-    footer p { font-size: 0.82rem; color: #3a6048; }
-    footer a { color: var(--earth); text-decoration: none; font-size: 0.82rem; }
+    footer p { font-size: 0.8rem; color: #2a4a38; }
+    footer a { color: var(--earth); text-decoration: none; font-size: 0.8rem; }
     footer a:hover { text-decoration: underline; }
+
+    /* ── FLOATING CTA (mobile) ── */
+    .float-cta {
+      display: none;
+      position: fixed;
+      bottom: 22px; left: 50%;
+      transform: translateX(-50%);
+      z-index: 99;
+      background: var(--earth);
+      color: var(--forest);
+      font-weight: 800;
+      font-size: 1rem;
+      padding: 15px 36px;
+      border-radius: 50px;
+      text-decoration: none;
+      box-shadow: 0 8px 32px rgba(0,0,0,.35);
+      transition: transform .2s, background .2s;
+      white-space: nowrap;
+    }
+
+    .float-cta:hover { background: var(--earth2); transform: translateX(-50%) translateY(-2px); }
+
+    @media (max-width: 600px) {
+      .float-cta { display: flex; align-items: center; gap: 8px; }
+    }
+
+    /* ── FADE-IN ── */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(22px);
+      transition: opacity .6s ease, transform .6s ease;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
   </style>
 </head>
 <body>
@@ -661,36 +1010,37 @@
 <!-- NAV -->
 <nav>
   <a href="#hero" class="nav-logo">
-    <svg viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <rect width="34" height="34" rx="9" fill="#2d7a4f"/>
-      <!-- leaf icon -->
-      <path d="M17 6 C17 6 8 12 8 20 C8 24.4 12.1 28 17 28 C21.9 28 26 24.4 26 20 C26 12 17 6 17 6Z" fill="#c8a96e" opacity="0.9"/>
-      <path d="M17 14 L17 26" stroke="#0f2218" stroke-width="1.5" stroke-linecap="round"/>
-      <path d="M17 19 C17 19 13 17 11 14" stroke="#0f2218" stroke-width="1.2" stroke-linecap="round"/>
-      <path d="M17 22 C17 22 21 20 23 17" stroke="#0f2218" stroke-width="1.2" stroke-linecap="round"/>
+    <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect width="36" height="36" rx="10" fill="#2d7a4f"/>
+      <path d="M18 7 C18 7 9 13 9 21 C9 25.4 13.1 29 18 29 C22.9 29 27 25.4 27 21 C27 13 18 7 18 7Z" fill="#c8a96e" opacity="0.9"/>
+      <path d="M18 15 L18 27" stroke="#0f2218" stroke-width="1.6" stroke-linecap="round"/>
+      <path d="M18 20 C18 20 14 18 12 15" stroke="#0f2218" stroke-width="1.3" stroke-linecap="round"/>
+      <path d="M18 23 C18 23 22 21 24 18" stroke="#0f2218" stroke-width="1.3" stroke-linecap="round"/>
     </svg>
     <span class="nav-logo-text">Island Green<br/><span>Landscaping</span></span>
   </a>
   <ul class="nav-links" id="navLinks">
     <li><a href="#services">Services</a></li>
+    <li><a href="#gallery">Gallery</a></li>
     <li><a href="#about">About</a></li>
     <li><a href="#reviews">Reviews</a></li>
-    <li><a href="#contact" class="nav-cta">Call Us</a></li>
+    <li><a href="#faq">FAQ</a></li>
+    <li><a href="#contact" class="nav-cta">Free Quote</a></li>
   </ul>
-  <div class="hamburger" onclick="toggleNav()">
+  <button class="hamburger" onclick="toggleNav()" aria-label="Toggle menu">
     <span></span><span></span><span></span>
-  </div>
+  </button>
 </nav>
 
 <!-- BADGE BAR -->
 <div class="badge-bar">
-  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-  Licensed &amp; Insured &nbsp;·&nbsp; In Business Since 2005 &nbsp;·&nbsp; Residential &amp; Commercial &nbsp;·&nbsp; All of Hawaii
+  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+  Licensed &amp; Insured &nbsp;·&nbsp; Serving Oahu Since 2005 &nbsp;·&nbsp; Residential &amp; Commercial &nbsp;·&nbsp; Free Consultations
 </div>
 
 <!-- HERO -->
 <section id="hero">
-  <div class="hero-leaves"></div>
+  <div class="hero-glow"></div>
   <svg class="leaf-bg" viewBox="0 0 300 500" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path d="M150 20 C150 20 30 100 30 250 C30 370 90 460 150 480 C210 460 270 370 270 250 C270 100 150 20 150 20Z" fill="white"/>
     <line x1="150" y1="80" x2="150" y2="470" stroke="white" stroke-width="4"/>
@@ -701,31 +1051,31 @@
   </svg>
 
   <div class="hero-content">
-    <div class="hero-badge">Hawaii's Top-Rated Landscaper Since 2005</div>
+    <div class="hero-badge">Oahu's Top-Rated Landscaper Since 2005</div>
     <h1>Transform Your<br/><span>Outdoor Space</span></h1>
-    <p>Susano and the Island Green team deliver customized landscaping solutions that are beautiful, sustainable, and eco-friendly — for residential and commercial properties across Hawaii.</p>
+    <p class="hero-sub">Susano and the Island Green team deliver customized landscaping solutions that are beautiful, sustainable, and built to last — for residential and commercial properties across Hawaii.</p>
     <div class="hero-actions">
       <a href="tel:8083687871" class="btn-primary">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.7A2 2 0 012 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
         (808) 368-7871
       </a>
-      <a href="#services" class="btn-outline">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-        Our Services
+      <a href="#contact" class="btn-outline">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+        Get a Free Quote
       </a>
     </div>
     <div class="hero-stats">
       <div>
-        <div class="stat-num">4.9</div>
+        <div class="stat-num">4.9★</div>
         <div class="stat-label">Google Rating</div>
       </div>
       <div>
-        <div class="stat-num">52</div>
+        <div class="stat-num">52+</div>
         <div class="stat-label">5-Star Reviews</div>
       </div>
       <div>
         <div class="stat-num">21+</div>
-        <div class="stat-label">Years in Business</div>
+        <div class="stat-label">Years Serving Hawaii</div>
       </div>
     </div>
   </div>
@@ -733,54 +1083,54 @@
 
 <!-- SERVICES -->
 <section id="services">
-  <div class="section-header">
+  <div class="section-header fade-in">
     <div class="section-tag">What We Do</div>
     <h2 class="section-title">Full-Service Landscaping<br/>for Hawaii Homes &amp; Businesses</h2>
-    <p class="section-sub">From design to installation to ongoing maintenance — residential and commercial — Island Green handles it all.</p>
+    <p class="section-sub">From design to installation to ongoing care — residential and commercial — Island Green handles it all.</p>
   </div>
   <div class="services-grid">
 
-    <div class="service-card">
+    <div class="service-card fade-in">
       <div class="service-icon">
-        <svg viewBox="0 0 24 24" fill="none" stroke="#2d7a4f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="13" rx="2"/><path d="M2 10h20"/><path d="M6 7V5a2 2 0 014 0v2"/><path d="M14 7V5a2 2 0 014 0v2"/></svg>
+        <svg viewBox="0 0 24 24" fill="none" stroke="#2d7a4f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l3-3 3 3 3-3 3 3 3-3"/><path d="M3 12l3-3 3 3 3-3 3 3 3-3"/><path d="M3 7l3-3 3 3 3-3 3 3 3-3"/></svg>
       </div>
       <h3>Artificial &amp; Synthetic Turf</h3>
       <p>Low-maintenance, lush-looking artificial grass installation. Beautiful year-round with zero watering required.</p>
     </div>
 
-    <div class="service-card">
+    <div class="service-card fade-in">
       <div class="service-icon">
-        <svg viewBox="0 0 24 24" fill="none" stroke="#2d7a4f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+        <svg viewBox="0 0 24 24" fill="none" stroke="#2d7a4f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M3 15h18"/><path d="M9 3v18"/><path d="M15 3v18"/></svg>
       </div>
       <h3>Concrete Work</h3>
       <p>Clean, well-designed concrete pours for driveways, walkways, patios, and yard areas — done with precision and care.</p>
     </div>
 
-    <div class="service-card">
+    <div class="service-card fade-in">
       <div class="service-icon">
-        <svg viewBox="0 0 24 24" fill="none" stroke="#2d7a4f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22V12"/><path d="M5 12H2a10 10 0 0020 0h-3"/><circle cx="12" cy="5" r="3"/><path d="M6.6 18.4L5 20M17.4 18.4L19 20"/></svg>
+        <svg viewBox="0 0 24 24" fill="none" stroke="#2d7a4f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="3"/><path d="M12 8v4"/><path d="M12 12l4 4"/><path d="M12 12l-4 4"/><circle cx="8" cy="19" r="2"/><circle cx="16" cy="19" r="2"/></svg>
       </div>
       <h3>Irrigation Systems</h3>
       <p>Full irrigation design and installation to keep your tropical plants and lawn healthy and thriving effortlessly.</p>
     </div>
 
-    <div class="service-card">
+    <div class="service-card fade-in">
       <div class="service-icon">
-        <svg viewBox="0 0 24 24" fill="none" stroke="#2d7a4f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        <svg viewBox="0 0 24 24" fill="none" stroke="#2d7a4f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22V12"/><path d="M5 4s.5 2 1 3c.8 1.8 3 3 6 3s5.2-1.2 6-3c.5-1 1-3 1-3"/><path d="M5 4c0 0-3 2-3 6s3 6 3 6"/><path d="M19 4c0 0 3 2 3 6s-3 6-3 6"/></svg>
       </div>
       <h3>Tropical Planting</h3>
       <p>Beautiful, climate-appropriate tropical plants sourced and installed to create a stunning Hawaiian landscape.</p>
     </div>
 
-    <div class="service-card">
+    <div class="service-card fade-in">
       <div class="service-icon">
-        <svg viewBox="0 0 24 24" fill="none" stroke="#2d7a4f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+        <svg viewBox="0 0 24 24" fill="none" stroke="#2d7a4f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2C8 6 8 10 8 12s0 6 4 10"/><path d="M12 2c4 4 4 8 4 10s0 6-4 10"/></svg>
       </div>
       <h3>Lava Rock &amp; Stepping Stones</h3>
       <p>Authentic Hawaiian lava rock features and stepping stone pathways that add character and function to your yard.</p>
     </div>
 
-    <div class="service-card">
+    <div class="service-card fade-in">
       <div class="service-icon">
         <svg viewBox="0 0 24 24" fill="none" stroke="#2d7a4f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
       </div>
@@ -788,15 +1138,15 @@
       <p>Custom yard planning and design tailored to your style, budget, and desired maintenance level — from concept to completion.</p>
     </div>
 
-    <div class="service-card">
+    <div class="service-card fade-in">
       <div class="service-icon">
-        <svg viewBox="0 0 24 24" fill="none" stroke="#2d7a4f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
+        <svg viewBox="0 0 24 24" fill="none" stroke="#2d7a4f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v3M12 19v3M4.22 4.22l2.12 2.12M17.66 17.66l2.12 2.12M2 12h3M19 12h3M4.22 19.78l2.12-2.12M17.66 6.34l2.12-2.12"/></svg>
       </div>
       <h3>Tree Stump Grinding</h3>
       <p>Fast, clean stump removal to clear your yard and make way for new landscaping features.</p>
     </div>
 
-    <div class="service-card">
+    <div class="service-card fade-in">
       <div class="service-icon">
         <svg viewBox="0 0 24 24" fill="none" stroke="#2d7a4f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0114.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0020.49 15"/></svg>
       </div>
@@ -804,9 +1154,9 @@
       <p>Regular yard upkeep to keep your outdoor space looking pristine — mowing, trimming, weeding, and more.</p>
     </div>
 
-    <div class="service-card">
+    <div class="service-card fade-in">
       <div class="service-icon">
-        <svg viewBox="0 0 24 24" fill="none" stroke="#2d7a4f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><path d="M9 22V12h6v10"/><path d="M3 15h18"/></svg>
+        <svg viewBox="0 0 24 24" fill="none" stroke="#2d7a4f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 4l4 8h10l4-8"/><path d="M7 12l-2 8"/><path d="M17 12l2 8"/><path d="M5 20h14"/></svg>
       </div>
       <h3>French Drain Installation</h3>
       <p>Effective drainage solutions to protect your property from water damage — designed and installed to last.</p>
@@ -815,11 +1165,50 @@
   </div>
 </section>
 
+<!-- HOW IT WORKS -->
+<section id="process">
+  <div class="section-header fade-in">
+    <div class="section-tag">How It Works</div>
+    <h2 class="section-title">From First Call to<br/>Dream Yard in 3 Steps</h2>
+    <p class="section-sub">Island Green keeps it simple. No guessing, no surprises — just a clear path from consultation to completion.</p>
+  </div>
+  <div class="process-steps">
+
+    <div class="process-step fade-in">
+      <div class="step-number">01</div>
+      <div class="step-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.7A2 2 0 012 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+      </div>
+      <h3>Free Consultation</h3>
+      <p>Call Susano at <a href="tel:8083687871" style="color:var(--earth);text-decoration:none;">(808) 368-7871</a> or fill out the quote form. He'll come out to your property, discuss your goals, and give you an honest, no-pressure estimate.</p>
+    </div>
+
+    <div class="process-step fade-in">
+      <div class="step-number">02</div>
+      <div class="step-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+      </div>
+      <h3>Custom Design</h3>
+      <p>Susano works closely with you to design your perfect outdoor space — tailored to your style, budget, and how much maintenance you want. Every detail is planned before a single tool touches the ground.</p>
+    </div>
+
+    <div class="process-step fade-in">
+      <div class="step-number">03</div>
+      <div class="step-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+      </div>
+      <h3>Expert Installation</h3>
+      <p>The Island Green crew arrives on time, works efficiently, and doesn't leave until the job is done right. Susano stops by regularly to check on progress — your satisfaction is guaranteed.</p>
+    </div>
+
+  </div>
+</section>
+
 <!-- ABOUT -->
 <section id="about" style="padding: 90px 5vw;">
-  <div class="about-card">
+  <div class="about-card fade-in">
     <div class="about-name">Susano &amp;<br/><span>Island Green</span></div>
-    <div class="about-title">Owner · Lead Landscaper</div>
+    <div class="about-title">Owner · Lead Landscaper · Waipahu, Oahu</div>
     <div class="about-detail">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.7A2 2 0 012 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
       <a href="tel:8083687871" style="color:#8abf9a;text-decoration:none;">(808) 368-7871</a>
@@ -830,80 +1219,86 @@
     </div>
     <div class="about-detail">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-      In Business Since 2005 · 21+ Years
+      Open 24/7 · In Business Since 2005
     </div>
     <div class="about-stars">
       <span class="stars">★★★★★</span>
-      <span class="stars-label">4.9 · 52 Google Reviews</span>
+      <span class="stars-label">4.9 · 52+ Google Reviews</span>
     </div>
   </div>
 
-  <div class="about-text">
+  <div class="about-text fade-in">
     <div class="section-tag">About Island Green</div>
-    <h2 class="section-title">Maui Landscapes,<br/>Done with Pride</h2>
+    <h2 class="section-title">Hawaii Landscapes,<br/>Done with Pride</h2>
     <p>Island Green Landscaping and Maintenance LLC has been transforming Hawaii's residential and commercial properties since 2005. Owner Susano personally oversees every project — working closely with each client to design beautiful, sustainable, and eco-friendly outdoor spaces tailored to their style and budget.</p>
     <p>Whether it's a complete yard overhaul or a focused installation, the Island Green team is known for showing up on time, finishing fast, and going beyond what's expected.</p>
     <ul class="check-list">
       <li>Licensed &amp; fully insured landscaping contractor</li>
-      <li>Serving Hawaii since 2005 — 21+ years of experience</li>
+      <li>Serving Oahu &amp; Hawaii since 2005 — 21+ years of experience</li>
       <li>Residential &amp; commercial properties</li>
       <li>Responsive — stops by often to check on work in progress</li>
       <li>Full-service: design, install, and ongoing maintenance</li>
+      <li>Free consultations — no pressure, no obligation</li>
     </ul>
     <a href="tel:8083687871" class="btn-primary" style="width:fit-content;">
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.7A2 2 0 012 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
-      Call Now
+      Call Susano Now
     </a>
   </div>
 </section>
 
 <!-- GALLERY -->
 <section id="gallery">
-  <div class="section-header">
+  <div class="section-header fade-in">
     <div class="section-tag">Our Work</div>
     <h2 class="section-title">Yards We've Transformed</h2>
-    <p class="section-sub">From bare dirt to dream outdoor spaces — residential and commercial across Hawaii.</p>
+    <p class="section-sub">From bare dirt to dream outdoor spaces — residential and commercial across Oahu and Hawaii.</p>
   </div>
   <div class="gallery-grid">
 
-    <div class="gallery-item tall">
+    <div class="gallery-item tall fade-in">
       <img
-        src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAEmSnmPzn35G6QYp8lceuxKBJVMKZPYGtA4lB9SPtAVqn7jpgca3qNK_cxy-sz7I5jkdQoSOZ2xAbaXqmiiZwyF9EjhSguBEThZrDzlN41vGv6jddpnHKeuzpdId1yjTRwB8aevRkDzYFyQ=w800-h1000"
-        alt="Concrete, artificial turf and tropical plants"
+        src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&q=80"
+        alt="Artificial turf installation"
+        loading="lazy"
       />
-      <div class="gallery-label">Concrete &amp; Turf</div>
+      <div class="gallery-label">Artificial Turf Installation</div>
     </div>
 
-    <div class="gallery-item">
+    <div class="gallery-item fade-in">
       <img
-        src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAGL9I_-tSQTQkogwSgGEJh7Wqv-B2KEqJWLY7XGG2gciD-_vSNvg05yiam8oXS57045-BQ1AqvcSkQWbziPlSDyKg4e6GLvhqRCwE_KaN4BCbI6ZTXE9PzQp_wPAqLP2kkqA2vQ49NuOqjz=w800-h600"
-        alt="Artificial turf and stone pavers"
+        src="https://images.unsplash.com/photo-1564952716565-b0c5b24baf9d?auto=format&fit=crop&w=800&q=80"
+        alt="Tropical garden and planting"
+        loading="lazy"
       />
-      <div class="gallery-label">Artificial Turf &amp; Pavers</div>
+      <div class="gallery-label">Tropical Planting</div>
     </div>
 
-    <div class="gallery-item">
+    <div class="gallery-item fade-in">
       <img
-        src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAHMG8ncpZZjlQOct8ns6hSvse-7QUzlwBohnMhvthOXSZrg0fkQhWD5kTrWH0zt5x3vytdqAVAW-xtXC16skqqCW-mcg2_48Pl1WV5QfNEHx7jqH5IFARO26VMiHYiyMXd8uv0Yp_FB0FIr=w800-h600"
-        alt="Lava rock garden bed with tropical plants"
+        src="https://images.unsplash.com/photo-1589923188651-268a9765e432?auto=format&fit=crop&w=800&q=80"
+        alt="Concrete and paver walkway"
+        loading="lazy"
       />
-      <div class="gallery-label">Lava Rock &amp; Planting</div>
+      <div class="gallery-label">Concrete &amp; Pavers</div>
     </div>
 
-    <div class="gallery-item">
+    <div class="gallery-item fade-in">
       <img
-        src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAHGxhKkgY-Fl5AxNFFLd1SfY-mn1KFRLhxqx2I_xWUzC1v0Z30GqQ7c4Bfll9F561H1nvMfdBDPwhi_MW3yQ0u-xDBQBuB5XcIJoMKC99SoM-jPBMU19NSKM7zLbQEXZw1Hvnv7=w800-h600"
-        alt="Yard transformation in progress"
+        src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=800&q=80"
+        alt="Lush garden landscape"
+        loading="lazy"
       />
-      <div class="gallery-label">Yard Transformation</div>
+      <div class="gallery-label">Garden Landscape</div>
     </div>
 
-    <div class="gallery-item">
+    <div class="gallery-item fade-in">
       <img
-        src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAGAB-52bkh064az9YSzqvkbB7prIhWmDwNx1cuOU0WyyTsDP9kUEE9He9gdG8hPnMsYLyn9DBF88rc7ZZx5f52gtgO9Lynnvm7jLyh-H8_bEXrwQV8rdfNWshZlH4UF2fYqVUc=w800-h600"
-        alt="Landscaping and irrigation work"
+        src="https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?auto=format&fit=crop&w=800&q=80"
+        alt="Lava rock and tropical plants"
+        loading="lazy"
       />
-      <div class="gallery-label">Full Service Landscaping</div>
+      <div class="gallery-label">Lava Rock &amp; Tropicals</div>
     </div>
 
   </div>
@@ -911,14 +1306,29 @@
 
 <!-- REVIEWS -->
 <section id="reviews">
-  <div class="section-header">
-    <div class="section-tag">Customer Reviews</div>
-    <h2 class="section-title">What Maui Homeowners Say</h2>
-    <p class="section-sub">4.9 stars across 52 Google reviews — some of Hawaii's happiest yards.</p>
+  <div class="reviews-header-row fade-in">
+    <div>
+      <div class="section-tag">Customer Reviews</div>
+      <h2 class="section-title">What Hawaii Homeowners Say</h2>
+      <p class="section-sub">4.9 stars across 52+ Google reviews — some of Hawaii's happiest yards.</p>
+    </div>
+    <a href="https://www.google.com/maps/place/Island+Green+Landscaping+and+Maintenance+LLC" target="_blank" rel="noopener" class="google-rating">
+      <div>
+        <div class="google-rating-num">4.9</div>
+        <div class="google-rating-stars">★★★★★</div>
+        <div class="google-rating-count">52+ Google Reviews</div>
+      </div>
+      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+        <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+        <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/>
+        <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
+      </svg>
+    </a>
   </div>
   <div class="reviews-grid">
 
-    <div class="review-card">
+    <div class="review-card fade-in">
       <div class="review-stars">★★★★★</div>
       <p class="review-text">Susano and his crew arrived at 8am and completed work by 2pm — a job that was quoted to take at least 2 days elsewhere. They were very professional and courteous, and left everything spotless. Customized designs with new turf, plants in newly created flower beds, and even used our own rocks for added flair.</p>
       <div class="review-author">
@@ -930,7 +1340,7 @@
       </div>
     </div>
 
-    <div class="review-card">
+    <div class="review-card fade-in">
       <div class="review-stars">★★★★★</div>
       <p class="review-text">Susano and his team did an amazing job on our yard. Their concrete work is excellent, very clean and well designed. He did a great job at working with us to design our yard and provide us the style and maintenance level we wanted.</p>
       <div class="review-author">
@@ -942,7 +1352,7 @@
       </div>
     </div>
 
-    <div class="review-card">
+    <div class="review-card fade-in">
       <div class="review-stars">★★★★★</div>
       <p class="review-text">We had a great experience working with Island Green. Susano not only transformed our yard, he also helped us add a second shutoff valve since our main water shutoff is in the ground. He was very responsive and thorough, stopping by often to check on things.</p>
       <div class="review-author">
@@ -954,7 +1364,7 @@
       </div>
     </div>
 
-    <div class="review-card">
+    <div class="review-card fade-in">
       <div class="review-stars">★★★★★</div>
       <p class="review-text">I can't say enough good things about Susano and Island Green Landscaping! Susano masterfully turned our home into a complete dream — full service: irrigation, concrete pour, lava rocks, beautiful tropical plants, turf, stepping stones…</p>
       <div class="review-author">
@@ -969,67 +1379,219 @@
   </div>
 </section>
 
+<!-- FAQ -->
+<section id="faq">
+  <div class="section-header fade-in">
+    <div class="section-tag">FAQ</div>
+    <h2 class="section-title">Frequently Asked Questions</h2>
+    <p class="section-sub">Quick answers to the questions we hear most. Still have one? Just call Susano directly.</p>
+  </div>
+  <div class="faq-grid" id="faqGrid">
+
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        Do you offer free estimates?
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+      </button>
+      <div class="faq-a">Yes — all consultations and estimates are completely free with no obligation. Susano will come out to your property, walk the space with you, and provide an honest estimate.</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        What areas of Hawaii do you serve?
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+      </button>
+      <div class="faq-a">Island Green is based in Waipahu and primarily serves Oahu, but travels throughout the Hawaiian Islands for commercial and larger residential projects. Call to confirm service to your area.</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        How long does a typical project take?
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+      </button>
+      <div class="faq-a">Island Green is known for fast, efficient work. Many jobs that other companies estimate at 2+ days are completed in a single day. Timeline varies based on scope — Susano will give you a realistic estimate upfront.</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        Are you licensed and insured?
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+      </button>
+      <div class="faq-a">Yes. Island Green Landscaping and Maintenance LLC is fully licensed and insured for both residential and commercial landscaping work in Hawaii.</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        Do you do both residential and commercial?
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+      </button>
+      <div class="faq-a">Absolutely. Island Green works with homeowners, rental properties, HOAs, businesses, and commercial properties of all sizes across Hawaii.</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        Can you design a low-maintenance yard?
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+      </button>
+      <div class="faq-a">Yes — it's one of Island Green's specialties. Artificial turf, lava rock, and drought-tolerant tropical plants can create a stunning yard that practically takes care of itself. Susano will design to your exact maintenance preference.</div>
+    </div>
+
+  </div>
+</section>
+
 <!-- CONTACT -->
 <section id="contact">
-  <div class="section-header">
-    <div class="section-tag" style="background:rgba(200,169,110,.15);color:var(--earth);">Get in Touch</div>
-    <h2 class="section-title">Ready to Transform<br/>Your Yard?</h2>
-    <p class="section-sub">Call Susano directly — he's available 24/7 and always picks up.</p>
-  </div>
-  <div class="contact-info">
+  <div class="contact-layout">
+    <div>
+      <div class="section-header fade-in" style="margin-bottom:36px;">
+        <div class="section-tag">Get in Touch</div>
+        <h2 class="section-title">Ready to Transform<br/>Your Yard?</h2>
+        <p class="section-sub">Call Susano directly — he's available 24/7 and always picks up.</p>
+      </div>
+      <div class="contact-info fade-in">
 
-    <a href="tel:8083687871" class="contact-item">
-      <div class="contact-item-icon">
-        <svg viewBox="0 0 24 24" fill="none" stroke="#c8a96e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.7A2 2 0 012 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
-      </div>
-      <div>
-        <div class="contact-item-label">Phone</div>
-        <div class="contact-item-value">(808) 368-7871</div>
-      </div>
-    </a>
+        <a href="tel:8083687871" class="contact-item">
+          <div class="contact-item-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#c8a96e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.7A2 2 0 012 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          </div>
+          <div>
+            <div class="contact-item-label">Phone</div>
+            <div class="contact-item-value">(808) 368-7871</div>
+          </div>
+        </a>
 
-    <div class="contact-item">
-      <div class="contact-item-icon">
-        <svg viewBox="0 0 24 24" fill="none" stroke="#c8a96e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        <a href="https://maps.google.com/?q=94-913+Lumihoahu+St,+Waipahu,+HI+96797" target="_blank" rel="noopener" class="contact-item">
+          <div class="contact-item-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#c8a96e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <div>
+            <div class="contact-item-label">Address</div>
+            <div class="contact-item-value" style="font-size:.9rem;">94-913 Lumihoahu St, Waipahu, HI 96797</div>
+          </div>
+        </a>
+
+        <div class="contact-item">
+          <div class="contact-item-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#c8a96e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <div>
+            <div class="contact-item-label">Hours</div>
+            <div class="contact-item-value">Open 24 Hours / 7 Days a Week</div>
+          </div>
+        </div>
+
       </div>
-      <div>
-        <div class="contact-item-label">Address</div>
-        <div class="contact-item-value" style="font-size:.9rem;">94-913 Lumihoahu St, Waipahu, HI 96797</div>
+
+      <div class="map-wrap fade-in" style="margin-top:24px;">
+        <iframe
+          src="https://maps.google.com/maps?q=94-913+Lumihoahu+St,+Waipahu,+HI+96797&output=embed"
+          allowfullscreen
+          loading="lazy"
+          title="Island Green Landscaping location map"
+        ></iframe>
       </div>
     </div>
 
-    <div class="contact-item">
-      <div class="contact-item-icon">
-        <svg viewBox="0 0 24 24" fill="none" stroke="#c8a96e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-      </div>
-      <div>
-        <div class="contact-item-label">Hours</div>
-        <div class="contact-item-value">Open 24 Hours / 7 Days</div>
+    <!-- QUOTE FORM -->
+    <div class="quote-form fade-in">
+      <h3>Get a Free Quote</h3>
+      <p>Fill out the form and Susano will reach out within 24 hours.</p>
+      <form id="quoteForm" onsubmit="handleSubmit(event)">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" name="fname" placeholder="John" required />
+          </div>
+          <div class="form-group">
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" name="lname" placeholder="Smith" required />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" name="phone" placeholder="(808) 555-0000" required />
+        </div>
+        <div class="form-group">
+          <label for="service">Service Needed</label>
+          <select id="service" name="service" required>
+            <option value="" disabled selected>Select a service…</option>
+            <option>Artificial / Synthetic Turf</option>
+            <option>Concrete Work</option>
+            <option>Irrigation System</option>
+            <option>Tropical Planting</option>
+            <option>Lava Rock &amp; Stepping Stones</option>
+            <option>Yard Design</option>
+            <option>Tree Stump Grinding</option>
+            <option>Ongoing Maintenance</option>
+            <option>French Drain Installation</option>
+            <option>Multiple / Not Sure</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="message">Tell Us About Your Project</label>
+          <textarea id="message" name="message" placeholder="Describe your yard, what you'd like done, and any questions…"></textarea>
+        </div>
+        <button type="submit" class="btn-form">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+          Send My Request
+        </button>
+      </form>
+      <div class="form-success" id="formSuccess">
+        <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:block;margin:0 auto 12px;"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+        <h3 style="color:var(--white);margin-bottom:8px;">Request Sent!</h3>
+        <p>Susano will be in touch within 24 hours. Or call him directly at <a href="tel:8083687871" style="color:var(--earth);">(808) 368-7871</a>.</p>
       </div>
     </div>
-
-    <div style="padding: 20px 22px; background: rgba(200,169,110,.08); border: 1px solid rgba(200,169,110,.2); border-radius: var(--radius); max-width: 560px;">
-      <p style="font-size:.9rem; color:#6a9a7a; line-height:1.65;">Ready for a yard you'll love? <strong style="color:var(--earth);">Call for a free consultation.</strong> Susano will work with you to design the perfect outdoor space for your home and budget.</p>
-    </div>
-
   </div>
 </section>
 
 <!-- FOOTER -->
 <footer>
   <div class="footer-logo">Island Green <span>Landscaping</span></div>
-  <p>© 2025 Island Green Landscaping &amp; Maintenance LLC · Waipahu, HI · <a href="tel:8083687871">(808) 368-7871</a></p>
+  <p>© 2025 Island Green Landscaping &amp; Maintenance LLC · Waipahu, Oahu, HI · <a href="tel:8083687871">(808) 368-7871</a></p>
+  <a href="https://www.google.com/maps/place/Island+Green+Landscaping+and+Maintenance+LLC" target="_blank" rel="noopener">Leave a Review</a>
 </footer>
+
+<!-- FLOATING CTA (mobile) -->
+<a href="tel:8083687871" class="float-cta">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.7A2 2 0 012 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+  Call (808) 368-7871
+</a>
 
 <script>
   function toggleNav() {
     document.getElementById('navLinks').classList.toggle('open');
   }
+
   document.querySelectorAll('a[href^="#"]').forEach(a => {
     a.addEventListener('click', () => {
       document.getElementById('navLinks').classList.remove('open');
     });
   });
+
+  function toggleFaq(btn) {
+    const item = btn.closest('.faq-item');
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item.open').forEach(el => el.classList.remove('open'));
+    if (!isOpen) item.classList.add('open');
+  }
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    document.getElementById('quoteForm').style.display = 'none';
+    document.getElementById('formSuccess').classList.add('show');
+  }
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 </script>
 </body>
 </html>
